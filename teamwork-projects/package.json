@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Project management SaaS",
   "main": "index.js",
-  "author": "Retzudo",
+  "author": "Retzudo <https://github.com/Retzudo/>, Ported by Koma <https://github.com/koma-private/>",
   "license": "MIT",
   "config": {
     "serviceURL": "https://{teamId}.teamwork.com/",
