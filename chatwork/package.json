@@ -1,0 +1,12 @@
+{
+  "id": "chatwork",
+  "name": "chatwork",
+  "version": "1.0.0",
+  "description": "chatwork",
+  "main": "index.js",
+  "author": "Koma",
+  "license": "MIT",
+  "config": {
+    "serviceURL": "https://www.chatwork.com"
+  }
+}
