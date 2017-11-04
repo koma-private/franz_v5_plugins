@@ -1,0 +1,12 @@
+{
+  "id": "wrike",
+  "name": "Wrike",
+  "version": "1.0.0",
+  "description": "Wrike",
+  "main": "index.js",
+  "author": "Koma",
+  "license": "MIT",
+  "config": {
+    "serviceURL": "https://www.wrike.com/login/"
+  }
+}
