@@ -1,18 +1,20 @@
+'use strict'; 
+
 module.exports = (Franz, options) => {
   function getMessages() {
     let directCount = 0;
     let indirectCount = 0;
-    let elements = document.getElementsByClassName('roomListBadges__unreadBadge _unreadBadge');
+    let roomInfoContainer = document.querySelectorAll('div.roomListItem__roomInfoContainer');
 
-    Array.prototype.forEach.call(elements, function(item) {
+    Array.prototype.forEach.call(roomInfoContainer, function(room) {
       let count = 0;
+      let unreadBadge = room.querySelector("li.roomListBadges__unreadBadge");
 
-      isGroup = item.parentNode.parentNode.parentNode.getElementsByClassName("avatarGroup").length
-      if (item.innerText) {
-        count = parseInt(item.innerText);
+      if (unreadBadge && unreadBadge.innerText) {
+        count = parseInt(unreadBadge.innerText);
       }
 
-      if (isGroup) {
+      if (room.querySelector("img.avatarGroup")) {
         // Count incoming group messages as indirectCount
         indirectCount += count;
       } else {
@@ -20,10 +22,7 @@ module.exports = (Franz, options) => {
       }
     });
 
-    // Current Franz 5 cannot show both of directCount and indirectCount on the badge.
-    // So, pass the summation of them to setBadge function.
-    // I'll change this code if Franz 5 have some options (e.g. switch for counting method) in the future.
-    Franz.setBadge(directCount + indirectCount);
+    Franz.setBadge(directCount, indirectCount);
   }
 
   Franz.loop(getMessages);
