@@ -8,6 +8,7 @@
   "license": "MIT",
   "config": {
     "serviceURL": "https://www.chatwork.com/login.php",
-    "hasIndirectMessages":true
+    "hasNotificationSound": true,
+    "hasIndirectMessages": true
   }
 }
