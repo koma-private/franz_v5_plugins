@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = (Franz, options) => {
   function getMessages() {
     let directCount = 0;
