@@ -1,4 +1,4 @@
-# Chatwork
+# WeChat
 Recipe for [WeChat](https://www.wechat.com) integration with [Franz 5](http://meetfranz.com)
 
 ## To test this dev release
