@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = (Franz, options) => {
   function getMessages() {
     let directCount = 0;
@@ -5,10 +7,10 @@ module.exports = (Franz, options) => {
     let badge = document.getElementById('numNotifs2');
 
     if (badge && badge.innerText) {
-        indirectCount = parseInt(badge.innerText);
+      indirectCount = parseInt(badge.innerText);
     }
 
-    Franz.setBadge(directCount + indirectCount);
+    Franz.setBadge(directCount, indirectCount);
   }
 
   Franz.loop(getMessages);
