@@ -6,8 +6,6 @@
   "main": "index.js",
   "author": "Koma",
   "license": "MIT",
-  "repository": "https://github.com/koma-private/franz_v5_recipes/tree/develop/chatwork",
-
   "config": {
     "serviceURL": "https://www.chatwork.com/login.php",
     "hasNotificationSound": true,
